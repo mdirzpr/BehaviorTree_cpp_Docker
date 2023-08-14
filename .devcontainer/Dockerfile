@@ -3,13 +3,13 @@
 ###########################################
 
 # Ubuntu 20.04 AMD64
-# FROM ubuntu:20.04
+FROM ubuntu:20.04
 
 # Ubuntu 20.04 ARM64
 # FROM arm64v8/ubuntu:focal
 
 # Ubuntu 22.04 AMD64
-FROM ubuntu:jammy
+# FROM ubuntu:jammy
 
 # Ubuntu 22.04 ARM64
 # FROM arm64v8/ubuntu:jammy
@@ -58,8 +58,8 @@ RUN apt-get update && \
     libzmq3-dev \
     libboost-dev
 
-# Version 4
-RUN git clone https://github.com/BehaviorTree/BehaviorTree.CPP.git
+# Version 3
+RUN git clone --branch v3.8 https://github.com/BehaviorTree/BehaviorTree.CPP.git
 
 RUN cd BehaviorTree.CPP && \
     mkdir build; cd build && \
